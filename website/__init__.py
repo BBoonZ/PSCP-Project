@@ -19,10 +19,8 @@ def create_app():
 
     from .models import User, Note
     
-    create_database(app)
-    '''with app.app_context():
+    with app.app_context():
         db.create_all()
-        print('ppk')'''
 
     return app
 
