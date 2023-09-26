@@ -17,13 +17,14 @@ def login():
         if user:
             if check_password_hash(user.password, password):
                 flash('Logged in successfully!', category='success')
+                login_user(user, remember=True)
                 return redirect(url_for('views.test'))
             else:
                 flash('Incorrect password, try again.', category='error')
         else:
             flash('Email does not exist.', category='error')
 
-    return render_template('login2.html')
+    return render_template('login2.html', user=current_user)
 
 @auth.route('/logout')
 @login_required
@@ -38,7 +39,10 @@ def sign_up():
         password1 = request.form.get('password1')
         password2 = request.form.get('password2')
 
-        if len(email) < 4:
+        user = User.query.filter_by(email=email).first()
+        if user:
+            flash('Email already exists.', category='error')
+        elif len(email) < 4:
             flash('Email must be grater than 3 characters', category='error')
         elif password1 != password2:
             flash('Password don\'t match.', category='error')
@@ -49,7 +53,8 @@ def sign_up():
             new_user = User(email=email, password=generate_password_hash(password1, method='sha256'))
             db.session.add(new_user)
             db.session.commit()
+            login_user(user, remember=True)
 
             flash('Account have been create', category='success')
             return redirect(url_for('views.home'))
-    return render_template('sign-up.html')
+    return render_template('sign-up.html', user=current_user)
