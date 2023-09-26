@@ -7,7 +7,7 @@
   font-family: 'Poppins', sans-serif;
 }
 body{
-  background-image: url('galaxy.jpeg');
+  background-image: url('milkway1.jpeg');
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -23,6 +23,9 @@ body{
   background: transparent;
   border-radius: 30px;
   border: 2px solid rgba(255, 255, 255, .2);
+}
+i{
+  text-align: right;
 }
 #check:checked ~ .registration{
   display: block;
