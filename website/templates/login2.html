@@ -27,6 +27,17 @@
             <span class="signup">Don't have an account?
             <label for="check"><a href="/sign-up">Signup</a></label>
             </span>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              {% for category, message in messages %}
+                {% if category == 'error' %}
+                  <h1>{{ message }}</h1>
+                {% else %}
+                  <h1>{{ message }}</h1>
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+            {% endwith %}
         </div>
         </div>
     </div>
