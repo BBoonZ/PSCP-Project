@@ -29,16 +29,31 @@ body{
   text-align: center;
 }
 
-.btn{
-  background-color: #0000008e;
-  border-radius: 12px;
-  border: .5px solid rgba(255, 255, 255, 0);
-  color: rgb(240, 248, 255);
-  padding: 12px 75px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+input.button{
+  color: #fff;
+  background: transparent;
+  border-radius: 30px;
+  border: 2px solid rgba(255, 255, 255, .2);
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-top: 1.7rem;
   cursor: pointer;
-
+  transition: 0.4s;
+  font-size: 12px;
+  padding: 13px;
+  width: 200px;
+  margin-top: 5px;
 }
+
+input.button:hover{
+  background: white;
+  color: #150c0c;
+}
+
+
+/*
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+
+*/

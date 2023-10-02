@@ -13,17 +13,29 @@ body{
   background-attachment: fixed;
   background-size: cover;
 }
-.container{
+
+.container0{
   position: absolute;
   top: 50%;
   left: 50%;
+  text-align: center;
+  font-size: 10px;
+  color: #ddd;
   transform: translate(-50%,-50%);
   max-width: 430px;
   width: 100%;
-  background: transparent;
+}
+
+.container0 h1{
+  margin-bottom: 10px;
+}
+
+.container{
+  background-color: transparent;
   border-radius: 30px;
   border: 2px solid rgba(255, 255, 255, .2);
 }
+
 .container .registration{
   display: none;
 }
@@ -48,6 +60,7 @@ body{
   margin-bottom: 1.5rem;
   margin-top: 2rem;
 }
+
  .form input{
    height: 60px;
    width: 100%;
@@ -63,8 +76,11 @@ body{
    border-color: 6px solid #ddd;
    outline: none;
  }
+
 .check label{
     font-size: 12px;
+    margin-left: 17px;
+    margin-top: 5px;
     color: #5478a4;
     text-decoration: none;
     display: flex;
@@ -76,7 +92,6 @@ input.Remember{
     width: 15px;
     height: 15px;
     accent-color: #5478a4;
-
 }
 
 .check a{

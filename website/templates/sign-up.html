@@ -11,10 +11,22 @@
   <link rel="stylesheet" type='text/css' href="{{ url_for('static',filename='styles/sign-up.css') }}">
 </head>
 <body>
+  <div class="container0">
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      {% if category == 'error' %}
+        <h1>{{ message }}</h1>
+      {% else %}
+        <h1>{{ message }}</h1>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+  {% endwith %}
     <div class="container">
       <input type="checkbox" id="check">
         <div class="registration form">
-            <a href="#"><i class="fa-regular fa-xmark" style="color: #f3f3f3; position: absolute; right: 20px; "></i></a>
+            <a href="/"><i class="fa-regular fa-xmark" style="color: #f3f3f3; position: absolute; right: 20px; "></i></a>
             <header>Signup</header>
             <form action="" method="post">
               <input type="email" name="email" id="email" placeholder="Enter your email">
@@ -26,19 +38,9 @@
               <label for="check"><a href="/login">Login</a></label>
               </span>
             </div>
-            {% with messages = get_flashed_messages(with_categories=true) %}
-            {% if messages %}
-              {% for category, message in messages %}
-                {% if category == 'error' %}
-                  <h1>{{ message }}</h1>
-                {% else %}
-                  <h1>{{ message }}</h1>
-                {% endif %}
-              {% endfor %}
-            {% endif %}
-            {% endwith %}
         </div>
     </div>
+  </div>
   </form>
 </body>
 </html>
