@@ -38,9 +38,9 @@ body{
 }
 
 .container{
-  background-color: transparent;
+  background-color: rgb(0, 0, 0, 47%);
   border-radius: 30px;
-  border: 2px solid rgba(255, 255, 255, .2);
+  border: 2px solid #ddd;
 }
 
 .container .registration{
@@ -64,8 +64,8 @@ body{
   font-size: 2rem;
   font-weight: 500;
   text-align: center;
-  margin-bottom: 1.5rem;
-  margin-top: 2rem;
+  margin-bottom: .75rem;
+  margin-top: .5rem;
 }
 
  .form input{
@@ -80,9 +80,13 @@ body{
    border-top: 1px transparent;
    border-left: 1px transparent;
    border-right: 1px transparent;
-   border-color: 6px solid #ddd;
+   border-bottom: 1px solid #ddd;
    outline: none;
  }
+
+::placeholder{
+  color: #ddd;
+}
 
 .check label{
     font-size: 12px;
@@ -104,20 +108,18 @@ input.Remember{
 .check a{
   margin-left: 35%;
   font-size: 12px;
-  color: #5478a4;
+  color: #ddd;
   text-decoration: none;
 }
 .form a:hover{
   text-decoration: underline;
 }
-.form a:visited{
-  color: #5478a4;
-}
+
 .form input.button{
   color: #fff;
   background: transparent;
-  border-radius: 30px;
-  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 20px;
+  border: 2px solid #ddd;
   font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 1px;
@@ -134,10 +136,10 @@ input.Remember{
   font-size: 16px;
   text-align: center;
 }
-.signup label{
-  color: #5478a4;
-  cursor: pointer;
-}
-.signup label:hover{
-  text-decoration: underline;
+
+.signup a{
+  color: #ffffff00;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(240, 248, 255);
+  text-decoration: none;
 }
