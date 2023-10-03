@@ -8,6 +8,14 @@ views = Blueprint('views', __name__)
 def home():
     return render_template('base.html', user=current_user)
 
+@views.route('/home')
+def home2():
+    return render_template('navbar.html', user=current_user)
+
+@views.route('/test2')
+def test2():
+    return render_template('test2.html', user=current_user)
+
 @views.route('/test')
 @login_required
 def test():

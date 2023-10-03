@@ -57,3 +57,7 @@ def sign_up():
             flash('Account have been create', category='success')
             return redirect(url_for('auth.sign_up'))
     return render_template('sign-up.html', user=current_user)
+
+@auth.route('/forgot', methods=['GET', 'POST'])
+def forgot():
+    return render_template('forgot.html')

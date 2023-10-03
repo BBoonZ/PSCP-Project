@@ -1,0 +1,45 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html{
+  min-height: 100%;
+}
+
+body{
+  background-image: url("milkway1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.navbar ul{
+    list-style-type: none;
+    background-color: #090101;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+  }
+  .navbar a{
+    color: #ddd;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+  }
+  .navbar a:hover{
+    background-color: #4d4444;
+  }
+  .navbar li{
+    float: left;
+  }
+  body i{
+    position: absolute;
+    right: 2rem;
+    top: 1.7rem;
+  }

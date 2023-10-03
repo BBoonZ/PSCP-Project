@@ -7,43 +7,22 @@
   font-family: 'Poppins', sans-serif;
 }
 body{
-  background-image: url('milkway1.jpg');
+  background-image: url('milkway1.jpeg');
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
 }
-
-.container0{
+.container{
   position: absolute;
   top: 50%;
   left: 50%;
-  text-align: center;
-  font-size: 10px;
-  color: #ddd;
   transform: translate(-50%,-50%);
   max-width: 430px;
   width: 100%;
-}
-
-.xbox{
-  position: absolute;
-  right: 20px;
-}
-
-.container0 h1{
-  margin-bottom: 10px;
-}
-
-.container0 h2{
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.container{
-  background-color: rgb(0, 0, 0, 20%);
+  background: transparent;
   border-radius: 30px;
-  border: 2px solid #dddddd8d;
+  border: 2px solid rgba(255, 255, 255, .2);
 }
 
 .container .registration{
@@ -61,18 +40,15 @@ body{
 .container .form{
   padding: 3rem;
   padding-top: 1rem;
-
-
 }
 .form header{
   color: #ddd;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 500;
   text-align: center;
   margin-bottom: 1.5rem;
   margin-top: 2rem;
 }
-
  .form input{
    height: 60px;
    width: 100%;
@@ -85,19 +61,12 @@ body{
    border-top: 1px transparent;
    border-left: 1px transparent;
    border-right: 1px transparent;
-   border-bottom: 1px solid #ddd;
+   border-color: 6px solid #ddd;
    outline: none;
  }
-
-::placeholder{
-  color: #dddddd8a;
-}
-
 .check label{
     font-size: 12px;
-    margin-left: 17px;
-    margin-top: 5px;
-    color: #7a90ffcd;
+    color: #5478a4;
     text-decoration: none;
     display: flex;
     width: auto;
@@ -105,33 +74,26 @@ body{
 }
 
 input.Remember{
-    margin-top: 1.25px;
     width: 15px;
     height: 15px;
-    accent-color: #7a90ffcd;
-}
+    accent-color: #5478a4;
 
-.check p{
-    margin-bottom: 10px;
-    margin-left: 7px;
 }
 
 .check a{
-  margin-bottom: 5px;
-  margin-left: 25%;
-  font-size: 12.5px;
-  color: #7a90ffcd;
+  margin-left: 35%;
+  font-size: 12px;
+  color: #5478a4;
   text-decoration: none;
 }
 .form a:hover{
   text-decoration: underline;
 }
-
 .form input.button{
   color: #fff;
   background: transparent;
-  border-radius: 20px;
-  border: 2px solid #dddddd8d;
+  border-radius: 30px;
+  border: 2px solid rgba(255, 255, 255, .2);
   font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 1px;
@@ -139,21 +101,20 @@ input.Remember{
   cursor: pointer;
   transition: 0.4s;
 }
-.form input.button:hover{
+.button:hover{
   background: white;
   color: #150c0c;
 }
-.signup{
-  color: #ddd;
-  font-size: 16px;
-  text-align: center;
+.back{
+    color: #ddd;
+    text-align: center;
+    font-size: 17px;
+
+}
+.back a{
+    color: #5478a4;
+}
+.back a:visited{
+    color: #5478a4;
 }
 
-.signup a{
-  color: #7a90ffcd;
-  text-decoration: none;
-}
-
-.signup a::hover{
-  text-decoration: underline;
-}
