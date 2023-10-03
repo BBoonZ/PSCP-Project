@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Login</title>
-  <script src="https://kit.fontawesome.com/1fadf630f7.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <!---Custom CSS File--->
   <link rel="stylesheet" type='text/css' href="{{ url_for('static',filename='styles/login1.css') }}">
 </head>
@@ -26,13 +26,13 @@
     <div class="container">
       <input type="checkbox" id="check">
         <div class="login form">
-        <a href="/"><i class="fa-regular fa-xmark" style="color: #f3f3f3; position: absolute; right: 20px; "></i></a>
+        <a href="/"><box-icon class='xbox' name='x' color='#d0cfcf'></box-icon></a>
         <header>Login</header>
         <form action="" method="post">
             <input type="email" name="email" id="email" placeholder="Email" required>
             <input type="password" name="password" id="password" placeholder="Password" required>
         <div class="check">
-            <label><input type="checkbox" class="Remember"><p>Remember</p>
+            <label><input type="checkbox" class="Remember"><p>Remember Me</p>
             <a href="#">Forgot password?</a></label> 
             <input type="submit" class="button" value="Login">     
         </div>
