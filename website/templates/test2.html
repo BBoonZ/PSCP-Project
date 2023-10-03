@@ -4,23 +4,28 @@
 {% block content %}
 <head>
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-  <link rel="stylesheet" type='text/css' href="{{ url_for('static',filename='styles/forgot.css') }}">
+  <link rel="stylesheet" type='text/css' href="{{ url_for('static',filename='styles/newpass.css') }}">
 </head>
 
 
-<div class="container">
-  <div class="forgothead">
-      <header>Forgot Password</header>
-      <span>Enter your email sent you link to reset your password.</span> 
+<body>
+  <div class="container">
+    <input type="checkbox" id="check">
+      <div class="login form">
+        <a href="/home"><box-icon class='xbox' name='x' color='#d0cfcf'></box-icon></a>
+        <header>Create New Password</header>
+      <form action="#">
+          <input type="text" placeholder="Password" required>
+          <input type="password" placeholder="Confrim Password" required>
+      </form>
+      <div class="check">
+          <input type="submit" class="button" value="Login">     
+      </div>
+      <div class="back">
+          <span id="backto">Back To <a href="/login">Login</a>
+          </span>
+      </div>
+      </div>
   </div>
-  <form action="#" class="box">
-      <input type="text" id="input" placeholder="Email" required>
-      <div><input type="button" class="button" value="Submit"></div>
-  </form>
-  <div class="back">
-      <span id="backto">Back To <a href="/login">Login</a>
-      </span>
-  </div>
-
-</div>
+</body>
 {% endblock %}

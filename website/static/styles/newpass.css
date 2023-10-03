@@ -7,7 +7,7 @@
   font-family: 'Poppins', sans-serif;
 }
 body{
-  background-image: url('milkway1.jpeg');
+  background-image: url('milkway1.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -20,9 +20,15 @@ body{
   transform: translate(-50%,-50%);
   max-width: 430px;
   width: 100%;
-  background: transparent;
+  background-color: rgb(0, 0, 0, 20%);
   border-radius: 30px;
-  border: 2px solid rgba(255, 255, 255, .2);
+  border: 2px solid #dddddd8d;
+}
+
+.xbox{
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 .container .registration{
@@ -61,9 +67,14 @@ body{
    border-top: 1px transparent;
    border-left: 1px transparent;
    border-right: 1px transparent;
-   border-color: 6px solid #ddd;
+   border-bottom: 1px solid #ddd;
    outline: none;
  }
+
+ ::placeholder{
+  color: #dddddd8a;
+}
+
 .check label{
     font-size: 12px;
     color: #5478a4;
@@ -92,8 +103,8 @@ input.Remember{
 .form input.button{
   color: #fff;
   background: transparent;
-  border-radius: 30px;
-  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 20px;
+  border: 2px solid #dddddd8d;
   font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 1px;
@@ -109,10 +120,10 @@ input.Remember{
     color: #ddd;
     text-align: center;
     font-size: 17px;
-
 }
 .back a{
     color: #5478a4;
+    text-decoration: none;
 }
 .back a:visited{
     color: #5478a4;

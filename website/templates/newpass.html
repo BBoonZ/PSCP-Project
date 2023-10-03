@@ -1,33 +1,31 @@
-<!DOCTYPE html>
-<!-- Coding By CodingNepal - codingnepalweb.com -->
-<html lang="en">
+{% extends "navbar.html" %}
+{% block title %}re-password{% endblock %}
+
+{% block content %}
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>rocket login</title>
-  <script src="https://kit.fontawesome.com/1fadf630f7.js" crossorigin="anonymous"></script>
-  <!---Custom CSS File--->
-  <link rel="stylesheet" href="newpass.css">
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <link rel="stylesheet" type='text/css' href="{{ url_for('static',filename='styles/newpass.css') }}">
 </head>
+
+
 <body>
-    <div class="container">
-      <input type="checkbox" id="check">
-        <div class="login form">
-        <a href="#"><i class="fa-regular fa-xmark" style="color: #f3f3f3; position: absolute; right: 20px; "></i></a>
+  <div class="container">
+    <input type="checkbox" id="check">
+      <div class="login form">
+        <a href="/home"><box-icon class='xbox' name='x' color='#d0cfcf'></box-icon></a>
         <header>Create New Password</header>
-        <form action="#">
-            <input type="text" placeholder="Password" required>
-            <input type="password" placeholder="Confrim Password" required>
-        </form>
-        <div class="check">
-            <input type="button" class="button" value="Login">     
-        </div>
-        <div class="back">
-            <span id="backto">Back To <a href="#">Login</a>
-            </span>
-        </div>
-        </div>
-    </div>
+      <form action="#">
+          <input type="text" placeholder="Password" required>
+          <input type="password" placeholder="Confrim Password" required>
+      </form>
+      <div class="check">
+          <input type="submit" class="button" value="Login">     
+      </div>
+      <div class="back">
+          <span id="backto">Back To <a href="/login">Login</a>
+          </span>
+      </div>
+      </div>
+  </div>
 </body>
-</html>
+{% endblock %}

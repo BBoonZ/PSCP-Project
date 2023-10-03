@@ -61,3 +61,7 @@ def sign_up():
 @auth.route('/forgot', methods=['GET', 'POST'])
 def forgot():
     return render_template('forgot.html')
+
+@auth.route('/create-new-password', methods=['GET', 'POST'])
+def newpass():
+    return render_template('newpass.html')
