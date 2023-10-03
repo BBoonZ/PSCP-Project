@@ -1,0 +1,120 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background-image: url('milkway1.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 430px;
+  width: 100%;
+  background: transparent;
+  border-radius: 30px;
+  border: 2px solid rgba(255, 255, 255, .2);
+}
+
+.container .registration{
+  display: none;
+}
+#check:checked ~ .registration{
+  display: block;
+}
+#check:checked ~ .login{
+  display: none;
+}
+#check{
+  display: none;
+}
+.container .form{
+  padding: 3rem;
+  padding-top: 1rem;
+}
+.form header{
+  color: #ddd;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+}
+ .form input{
+   height: 60px;
+   width: 100%;
+   padding: 0 15px;
+   background-color: transparent;
+   caret-color: #ffffff;
+   color: #ffffff;
+   font-size: 17px;
+   margin-bottom: 1.3rem;
+   border-top: 1px transparent;
+   border-left: 1px transparent;
+   border-right: 1px transparent;
+   border-color: 6px solid #ddd;
+   outline: none;
+ }
+.check label{
+    font-size: 12px;
+    color: #5478a4;
+    text-decoration: none;
+    display: flex;
+    width: auto;
+    height: 17px;
+}
+
+input.Remember{
+    width: 15px;
+    height: 15px;
+    accent-color: #5478a4;
+
+}
+
+.check a{
+  margin-left: 35%;
+  font-size: 12px;
+  color: #5478a4;
+  text-decoration: none;
+}
+.form a:hover{
+  text-decoration: underline;
+}
+.form input.button{
+  color: #fff;
+  background: transparent;
+  border-radius: 30px;
+  border: 2px solid rgba(255, 255, 255, .2);
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-top: 1.7rem;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.button:hover{
+  background: white;
+  color: #150c0c;
+}
+.back{
+    color: #ddd;
+    text-align: center;
+    font-size: 17px;
+
+}
+.back a{
+    color: #5478a4;
+}
+.back a:visited{
+    color: #5478a4;
+}
+

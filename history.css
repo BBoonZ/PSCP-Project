@@ -1,0 +1,130 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+    background-image: url('milkway1.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 430px;
+    width: 100%;
+    background: transparent;
+    border-radius: 30px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    text-align: center;
+    padding-bottom: 1.7rem;
+}
+.dropdown{
+    display: inline-block;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+.fa-user{
+    position: absolute;
+    right: 30px;
+    top: 51px;
+    cursor: pointer;
+}
+.fa-angles-left{
+    position: absolute;
+    left: 30px;
+    top: 49px;
+    cursor: pointer;
+}
+.dropdown button{
+    background-color: transparent;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 30px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    width: 9rem;
+}
+.dropdown a{
+    display: block;
+    color: rgb(243, 240, 240);
+    text-decoration: none;
+    padding: 10px;
+    min-width: 100px;
+    display: none;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+}
+.dropdown .content{
+    position: absolute;
+    background-color: none;
+    border: none;
+    left: 8.2rem;
+}
+.content a i{
+    position: absolute;
+    left: 8.5rem;
+    margin-top: 5.5px;
+}
+.dropdown:hover .content{
+    width: 10rem;
+    height: 17rem;
+    overflow: scroll;
+    border-radius: 30px;
+}
+.dropdown:hover a{
+    display: block;
+    background-color: rgb(29, 29, 34);
+}
+.dropdown:hover button{
+    background-color: rgb(29, 29, 34);
+    margin-bottom: 5px;
+    border: none;
+}
+.dropdown a:hover{
+    background-color: rgb(174, 178, 178);
+}
+.flame{
+    margin-left: 1.7rem;
+    overflow: scroll;
+    width: auto;
+    height: 30rem;
+}
+.flame img{
+    height: 110px;
+    width: 110px;
+    border-radius: 17px;
+    margin: 3px;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+}
+.flame .row1{
+    float: left;
+    box-sizing: border-box;
+    width: 7.7rem;
+}
+.flame .row2{
+    float: left;
+    box-sizing: border-box;
+    width: 7.7rem;
+}
+.flame .row3{
+    float: left;
+    box-sizing: border-box;
+    width: 7.7rem;
+}
+.flame .row4{
+    float: left;
+    box-sizing: border-box;
+    width: 7.7rem;
+}
