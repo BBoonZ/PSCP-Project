@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template
 from flask_login import login_required, current_user
-
+from .models import Note
+from . import db
 
 views = Blueprint('views', __name__)
 
@@ -14,9 +15,17 @@ def home2():
 
 @views.route('/test2')
 def test2():
-    return render_template('history.html', user=current_user)
+    return render_template('test2.html', user=current_user)
 
 @views.route('/test')
 @login_required
 def test():
     return render_template('test.html', user=current_user)
+
+@views.route('add-db')
+def add_db():
+    month = Note(month='test')
+    db.session.add(month)
+    db.session.commit()
+
+    return render_template('test3.html', user=current_user)
