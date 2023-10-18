@@ -14,7 +14,7 @@ def home2():
 
 @views.route('/test2')
 def test2():
-    return render_template('test2.html', user=current_user)
+    return render_template('history.html', user=current_user)
 
 @views.route('/test')
 @login_required

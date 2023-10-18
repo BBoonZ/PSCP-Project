@@ -3,29 +3,48 @@
 
 {% block content %}
 <head>
-  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-  <link rel="stylesheet" type='text/css' href="{{ url_for('static',filename='styles/newpass.css') }}">
+  <script src="https://kit.fontawesome.com/1fadf630f7.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type='text/css' href="{{ url_for('static',filename='styles/history.css') }}">
 </head>
 
-
 <body>
-  <div class="container">
-    <input type="checkbox" id="check">
-      <div class="login form">
-        <a href="/home"><box-icon class='xbox' name='x' color='#d0cfcf'></box-icon></a>
-        <header>Create New Password</header>
-      <form action="#">
-          <input type="text" placeholder="Password" required>
-          <input type="password" placeholder="Confrim Password" required>
-      </form>
-      <div class="check">
-          <input type="submit" class="button" value="Login">     
-      </div>
-      <div class="back">
-          <span id="backto">Back To <a href="/login">Login</a>
-          </span>
-      </div>
-      </div>
-  </div>
+    <div class="container">
+        <span><a href="#"><i class="fa-solid fa-angles-left" style="color: #ffffff;"></i></a>
+            <a href="#"><i class="fa-solid fa-user fa-xl" style="color: #ffffff;"></i></a>
+        </span>
+        <div class="dropdown">
+            <button> Month <i class="fa-solid fa-angle-down" style="color: #ffffff;"></i></button>
+            <div class="content">
+                <a href="#">Day-Month-Year</a>
+                <a href="#">January <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a>
+                <a href="#">February <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a>
+                <a href="#">March <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a>
+                <a href="#">April <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a>
+                <a href="#">May <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a>
+                <a href="#">June <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a>
+                <a href="#">July <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a>
+                <a href="#">Agust <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a>
+                <a href="#">September <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a>
+                <a href="#">October <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a>
+                <a href="#">November <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a>
+                <a href="#">December <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></a>
+            </div>
+        </div>
+        <div class="flame">
+            <div class="row1" id="f11"><img src="milkway1.jpg" alt="picture"></div>
+            <div class="row1" id="f12"><img src="milkway1.jpg" alt="picture"></div>
+            <div class="row1" id="f13"><img src="milkway1.jpg" alt="picture"></div>
+            <div class="row2" id="f21"><img src="milkway1.jpg" alt="picture"></div>
+            <div class="row2" id="f22"><img src="milkway1.jpg" alt="picture"></div>
+            <div class="row2" id="f23"><img src="milkway1.jpg" alt="picture"></div>
+            <div class="row3" id="f31"><img src="milkway1.jpg" alt="picture"></div>
+            <div class="row3" id="f32"><img src="milkway1.jpg" alt="picture"></div>
+            <div class="row3" id="f33"><img src="milkway1.jpg" alt="picture"></div>
+            <div class="row4" id="f41"><img src="milkway1.jpg" alt="picture"></div>
+            <div class="row4" id="f42"><img src="milkway1.jpg" alt="picture"></div>
+            <div class="row4" id="f43"><img src="milkway1.jpg" alt="picture"></div>
+        </div>
+    </div>
 </body>
+</html>
 {% endblock %}
