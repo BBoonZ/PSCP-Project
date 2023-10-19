@@ -24,8 +24,5 @@ def test():
 
 @views.route('add-db')
 def add_db():
-    month = Note(month='test')
-    db.session.add(month)
-    db.session.commit()
 
     return render_template('test3.html', user=current_user)
