@@ -6,6 +6,9 @@ import time
 class Note(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     data = db.Column(db.String(10000))
+    day = db.Column(db.String(50))
+    month = db.Column(db.String(50))
+    love = db.Column(db.String(50))
     data = db.Column(db.DateTime(timezone=True), default=func.now())
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
