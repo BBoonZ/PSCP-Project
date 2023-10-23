@@ -1,4 +1,2 @@
-!*.db
-!*.pyc
-*.db
-*.pyc
+website\__pycache__
+instance\database.db
