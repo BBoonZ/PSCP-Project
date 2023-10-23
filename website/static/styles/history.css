@@ -40,7 +40,7 @@ body{
 }
 .fa-angles-left{
     position: absolute;
-    left: 30px;
+    right: 380px;
     top: 49px;
     cursor: pointer;
 }
@@ -54,6 +54,12 @@ body{
     font-size: 14px;
     font-weight: 500;
     width: 9rem;
+    margin-right: 0px;
+}
+.fa-angle-down{
+    position: absolute;
+    top: 3rem;
+    left: 8.5rem;
 }
 .dropdown a{
     display: block;
@@ -70,11 +76,6 @@ body{
     background-color: none;
     border: none;
     left: 8.2rem;
-}
-.content a i{
-    position: absolute;
-    left: 8.5rem;
-    margin-top: 5.5px;
 }
 .dropdown:hover .content{
     width: 10rem;
