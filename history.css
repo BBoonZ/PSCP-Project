@@ -20,7 +20,7 @@ body{
     transform: translate(-50%,-50%);
     max-width: 430px;
     width: 100%;
-    background: transparent;
+    background-color: transparent;
     border-radius: 30px;
     border: 2px solid rgba(255, 255, 255, .2);
     text-align: center;
