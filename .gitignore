@@ -1,4 +1,4 @@
-website/__pycache__
+!*.db
+!*.pyc
 *.db
-*.db
-instance/database.db
+*.pyc
