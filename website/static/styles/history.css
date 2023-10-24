@@ -32,7 +32,7 @@ body{
     margin-top: 2rem;
     margin-bottom: 1.5rem;
 }
-.fa-user{
+#userinbox{
     position: absolute;
     right: 30px;
     top: 51px;
@@ -54,12 +54,12 @@ body{
     font-size: 14px;
     font-weight: 500;
     width: 9rem;
-    margin-right: 0px;
 }
-.fa-angle-down{
+.dropdown span{
     position: absolute;
-    top: 3rem;
-    left: 8.5rem;
+    top: 1.3rem;
+    right: 7.8rem;
+    display: inline-block;
 }
 .dropdown a{
     display: block;
