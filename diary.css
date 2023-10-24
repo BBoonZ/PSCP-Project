@@ -39,7 +39,7 @@ header{
   }
 .fa-user{
     position: absolute;
-    right: 68px;
+    right: 55px;
     top: 55px;
     cursor: pointer;
 }
@@ -64,8 +64,24 @@ header{
     font-weight: 100;
     color: #352e2e;
 }
-.addiary i{
+.addiary span{
     position: absolute;
     bottom: 2rem;
-    left: 11.7rem;
+    left: 10.8rem;
+    background-color: #ddd;
+    border-radius: 3rem;
+    width: 3rem;
+    height: 3rem;
+}
+.addiary img{
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 7px;
+    margin: 1px;
+    margin-bottom: 0.1px;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    position: absolute;
+    bottom: 2.2rem;
+    left: 3.5rem;
 }
