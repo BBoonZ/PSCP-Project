@@ -28,7 +28,7 @@ def diary():
 @login_required
 def test2(note_id):
     note = Note.query.filter_by(user_id=current_user.id).all()
-    note_str = [str(i) for i in note]
+    note_str = sorted([str(i) for i in note], reverse=True)
     return render_template('test2.html', user=current_user, note_id=note_id, note=note, note_len=len(note_str), note_str=note_str)
 
 @views.route('/test')
