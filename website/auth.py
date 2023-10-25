@@ -1,8 +1,9 @@
 from flask import Blueprint ,render_template, request, flash, redirect, url_for
-from .models import User
+from .models import User, Note
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import login_user, login_required, logout_user, current_user
 from . import db
+import datetime
 
 
 auth = Blueprint('auth', __name__)
@@ -65,3 +66,21 @@ def forgot():
 @auth.route('/create-new-password', methods=['GET', 'POST'])
 def newpass():
     return render_template('newpass.html', user=current_user)
+
+
+@auth.route('/edit', methods=['GET', 'POST'])
+@login_required
+def edit():
+    if request.method == 'POST':
+        note = request.form.get('text')
+
+        current_datetime = datetime.datetime.today()
+
+        month_name = current_datetime.strftime('%B')
+        day_name = current_datetime.strftime('%A')
+
+        _txt = Note(data=note, day=day_name, month=month_name, love='True', user_id=current_user.id)
+        db.session.add(_txt)
+        db.session.commit()
+    return render_template('edit.html', user=current_user)
+    

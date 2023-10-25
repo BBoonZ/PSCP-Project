@@ -19,12 +19,12 @@
             <li><a href="/sign-up">Sign Up</a></li>
             {% else %}
             <li><a href="/home">Home</a></li>
-            <li><a href="/history">Diary</a></li>
+            <li><a href="/diary">Diary</a></li>
             {% endif %}
         </ul>
     </nav>
     {% if user.is_authenticated %}
-    <a href="/user/info"><i class="fa-solid fa-user fa-xl" style="color: #ffffff;"></i></a>
+    <a href="/user/info"><i class="fa-solid fa-user fa-xl" id="nav-iogo" style="color : #ffffff;"></i></a>
     {% endif %}
     {% block content %}{% endblock %}
 </body>

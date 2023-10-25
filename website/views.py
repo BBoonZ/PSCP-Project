@@ -18,8 +18,10 @@ def home2():
 def history():
     return render_template('history.html', user=current_user, note=Note, len=len)
 
-def len(val):
-    return len(val)
+@views.route('/diary')
+@login_required
+def diary():
+    return render_template('diary.html', user=current_user)
 
 @views.route('/test2')
 def test2():
