@@ -9,7 +9,7 @@ class Note(db.Model):
     day = db.Column(db.String(50))
     month = db.Column(db.String(50))
     love = db.Column(db.String(50))
-    data = db.Column(db.DateTime(timezone=True), default=func.now())
+    date = db.Column(db.DateTime(timezone=True), default=func.now())
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
 class User(db.Model, UserMixin):

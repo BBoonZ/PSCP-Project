@@ -19,23 +19,26 @@ header{
   color: #fff;
 }
 
-.container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    max-width: 430px;
-    width: 30rem;
-    background-color: rgb(0, 0, 0, 20%);
-    border-radius: 30px;
-    border: 2px solid #dddddd8d;
-    text-align: center;
-    padding-left: 1px;
-    padding-top: 1rem;
-    padding-right: 1px;
-    padding-bottom: 7rem;
-    height: 37rem;
+.container0{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 430px;
+  width: 30rem;
+  text-align: center;
+  color: #fff;
+  max-width: 430px;
+  height: 575px;
 }
+
+.container{
+  background-color: rgb(0, 0, 0, 20%);
+  border-radius: 30px;
+  border: 2px solid #dddddd8d;
+  height: 575px;
+}
+
 .fa-angles-left{
   position: absolute;
   left: 30px;

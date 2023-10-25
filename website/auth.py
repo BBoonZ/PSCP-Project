@@ -82,5 +82,7 @@ def edit():
         _txt = Note(data=note, day=day_name, month=month_name, love='True', user_id=current_user.id)
         db.session.add(_txt)
         db.session.commit()
+
+        flash('Your Diary has been Create!', category='success')
     return render_template('edit.html', user=current_user)
     

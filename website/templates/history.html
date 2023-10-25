@@ -32,8 +32,8 @@
             </div>
         </div>
         <div class="flame">
-            {% for i in range(2) %}
-                <a href="/test2"><div class="row1" id="f11"><img src="{{ url_for('static',filename='styles/jin.JPG') }}" alt="picture"></div></a>
+            {% for i in note %}
+                <a href="/test2/{{ i }}"><div class="row1" id="f11"><img src="{{ url_for('static',filename='styles/jin.JPG') }}" alt="picture"></div></a>
             {% endfor %}
         </div>
     </div>
