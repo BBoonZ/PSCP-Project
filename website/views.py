@@ -13,6 +13,14 @@ def home():
 def home2():
     return render_template('navbar.html', user=current_user)
 
+@views.route('/history')
+@login_required
+def history():
+    return render_template('history.html', user=current_user, note=Note, len=len)
+
+def len(val):
+    return len(val)
+
 @views.route('/test2')
 def test2():
     return render_template('test2.html', user=current_user)

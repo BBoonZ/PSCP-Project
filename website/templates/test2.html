@@ -1,41 +1,12 @@
-{% extends "navbar.html" %}
-{% block title %}forgot{% endblock %}
-
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <script src="https://kit.fontawesome.com/1fadf630f7.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" type='text/css' href="{{ url_for('static',filename='styles/history.css') }}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-
 <body>
-    <div class="container">
-        <span><a href="#"><i class="fa-solid fa-angles-left" style="color: #ffffff;"></i></a>
-            <a href="#"><i class="fa-solid fa-user fa-xl" id="userinbox" style="color: #ffffff;"></i></a>
-        </span>
-        <div class="dropdown">
-            <button> Month <span><i class="fa-solid fa-angle-down" style="color: #ffffff;"></i></span></button>
-            <div class="content">
-                <a href="#">Day-Month-Year</a>
-                <a href="#">January</a>
-                <a href="#">February</a>
-                <a href="#">March</a>
-                <a href="#">April</a>
-                <a href="#">May</a>
-                <a href="#">June</a>
-                <a href="#">July</a>
-                <a href="#">Agust</a>
-                <a href="#">September</a>
-                <a href="#">October</a>
-                <a href="#">November</a>
-                <a href="#">December</a>
-            </div>
-        </div>
-        <div class="flame">
-            {% for i in range(5)%}
-                <div class="row1" id="f11"><img src="{{ url_for('static',filename='styles/jin.JPG') }}" alt="picture"></div>
-            {% endfor %}
-        </div>
-    </div>
+    <textarea name="txt" id="txt" cols="30" rows="10"></textarea>
 </body>
 </html>
-{% endblock %}

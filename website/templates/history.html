@@ -1,54 +1,42 @@
-<!DOCTYPE html>
-<!-- Coding By CodingNepal - codingnepalweb.com -->
-<html lang="en">
+{% extends "navbar.html" %}
+{% block title %}history{% endblock %}
+
+{% block content %}
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>rocket login</title>
   <script src="https://kit.fontawesome.com/1fadf630f7.js" crossorigin="anonymous"></script>
-  <!---Custom CSS File--->
   <link rel="stylesheet" type='text/css' href="{{ url_for('static',filename='styles/history.css') }}">
 </head>
+
 <body>
     <div class="container">
         <span><a href="#"><i class="fa-solid fa-angles-left" style="color: #ffffff;"></i></a>
-            <a href="#"><i class="fa-solid fa-user fa-xl" style="color: #ffffff;"></i></a>
+            <a href="#"><i class="fa-solid fa-user fa-xl" id="userinbox" style="color: #ffffff;"></i></a>
         </span>
         <div class="dropdown">
-            <button> Month</button>
-            <i class="fa-solid fa-angle-down" style="color: #ffffff;"></i>
+            <button> Month <span><i class="fa-solid fa-angle-down" style="color: #ffffff;"></i></span></button>
             <div class="content">
-                <a href="#">Day-Month-Year</a>
-                <a href="#">January </a><!-- <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i> -->
-                <a href="#">February </a><!-- <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i> -->
-                <a href="#">March </a><!-- <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i> -->
-                <a href="#">April </a><!-- <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i> -->
-                <a href="#">May </a><!-- <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i> -->
-                <a href="#">June </a><!-- <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i> -->
-                <a href="#">July </a><!-- <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i> -->
-                <a href="#">Agust </a><!-- <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i> -->
-                <a href="#">September </a><!-- <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i> -->
-                <a href="#">October </a><!-- <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i> -->
-                <a href="#">November </a><!-- <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i> -->
-                <a href="#">December </a><!-- <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i> -->
+                <a href="#">Default</a>
+                <a href="#">Favorite</a>
+                <a href="#">January</a>
+                <a href="#">February</a>
+                <a href="#">March</a>
+                <a href="#">April</a>
+                <a href="#">May</a>
+                <a href="#">June</a>
+                <a href="#">July</a>
+                <a href="#">August</a>
+                <a href="#">September</a>
+                <a href="#">October</a>
+                <a href="#">November</a>
+                <a href="#">December</a>
             </div>
         </div>
         <div class="flame">
-            <div class="row1" id="f11"><img src="{{ url_for('static',filename='styles/wlop.jpg') }}" alt="picture"></div>
-            <div class="row1" id="f12"><img src="{{ url_for('static',filename='styles/wlop.jpg') }}" alt="picture"></div>
-            <div class="row1" id="f13"><img src="{{ url_for('static',filename='styles/wlop.jpg') }}" alt="picture"></div>
-            <div class="row2" id="f21"><img src="{{ url_for('static',filename='styles/wlop.jpg') }}" alt="picture"></div>
-            <div class="row2" id="f22"><img src="{{ url_for('static',filename='styles/wlop.jpg') }}" alt="picture"></div>
-            <div class="row2" id="f23"><img src="{{ url_for('static',filename='styles/wlop.jpg') }}" alt="picture"></div>
-            <div class="row3" id="f31"><img src="{{ url_for('static',filename='styles/wlop.jpg') }}" alt="picture"></div>
-            <div class="row3" id="f32"><img src="{{ url_for('static',filename='styles/wlop.jpg') }}" alt="picture"></div>
-            <div class="row3" id="f33"><img src="{{ url_for('static',filename='styles/wlop.jpg') }}" alt="picture"></div>
-            <div class="row4" id="f41"><img src="{{ url_for('static',filename='styles/wlop.jpg') }}" alt="picture"></div>
-            <div class="row4" id="f42"><img src="{{ url_for('static',filename='styles/wlop.jpg') }}" alt="picture"></div>
-            <div class="row4" id="f43"><img src="{{ url_for('static',filename='styles/wlop.jpg') }}" alt="picture"></div>
-            <div class="row4" id="f43"><img src="{{ url_for('static',filename='styles/wlop.jpg') }}" alt="picture"></div>
+            {% for i in range(2) %}
+                <a href="/test2"><div class="row1" id="f11"><img src="{{ url_for('static',filename='styles/jin.JPG') }}" alt="picture"></div></a>
+            {% endfor %}
         </div>
     </div>
 </body>
 </html>
+{% endblock %}
