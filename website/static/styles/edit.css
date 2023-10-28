@@ -16,16 +16,21 @@ body{
 }
 
 header{
-  color: #fff;
+    color: #ddd;
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .container0{
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%,-50%);
   max-width: 430px;
-  width: 30rem;
+  width: 25rem;
   text-align: center;
   color: #fff;
   max-width: 430px;
@@ -38,27 +43,25 @@ header{
   border: 2px solid #dddddd8d;
   height: 575px;
 }
-
 .fa-angles-left{
-  position: absolute;
-  left: 30px;
+  right: 22.4rem;
   top: 39px;
-  cursor: pointer;
+  
 }
-.fa-2xl{
-  position: absolute;
-  right: 34px;
+#camera{
+  right: 28px;
+  top: 43px;
 }
 .flame{
   border: solid white 2px;
-  background-color: #0e1f408d;
-  width: 20rem;
-  height: 25rem;
+  background-color: transparent;
+  width: 19rem;
+  height: 19rem;
   border-radius: 2rem;
-  margin-left: 52px;
+  margin-left: 45px;
   padding: none;
   overflow: scroll;
-  margin-top: 2.5rem;
+  margin-top: 1rem;
 }
 .text{
   width: 100%;
@@ -73,21 +76,26 @@ header{
   background-color: transparent;
 }
 .text:focus{
-  background-color: rgb(49, 59, 97);
+  background-color: rgba(12, 20, 50, 0.311);
+}
+.memory{
+  font-weight: 100;
+  font-size: 14px;
+  margin-top: 5px;
 }
 .button{
   color: #fff;
   background: transparent;
   border-radius: 30px;
-  border: 2px solid rgba(255, 255, 255, .2);
+  border: 2px solid rgba(255, 255, 255, 0.642);
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 300;
   letter-spacing: 1px;
-  margin-top: 1.7rem;
+  margin-top: 3.8rem;
   cursor: pointer;
   transition: 0.4s;
-  width: 10rem;
-  height: 3rem;
+  width: 11rem;
+  height: 3.3rem;
 }
 .button:hover{
   background: white;

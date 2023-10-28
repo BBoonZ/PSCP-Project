@@ -8,16 +8,15 @@
 </head>
 <body>
     <div class="container">
-        <header>Diary</header>
-        <a href="#"><i class="fa-solid fa-user fa-xl" style="color: #ffffff;"></i></a>
+        <header>Docket</header>
         
         <div class="flame">
             <a href="#"><div><img src="{{ url_for('static',filename='styles/jin.JPG') }}" alt="picture"></div></a>
-            <div><span id="text1">January</span><span id="text2"> Just now</span></div>
+            <div class="month"><span id="text1">January</span><span id="text2"> Just now</span></div>
         </div>
         <div class="addiary">
-            <a href="/edit"><span></span></a>
-            <a href="/history"><div><img src="{{ url_for('static',filename='styles/jin.JPG') }}" alt="picturehistory"></div></a>
+            <a href="/history"><input type="submit" class="history" value="History"></a>
+            <a href="/edit"><input type="submit" class="add" value="ADD Diary"></a>
         </div>
     </div>
 </body>
