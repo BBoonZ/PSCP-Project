@@ -20,14 +20,17 @@
         {% endif %}
     {% endwith %}
         <div class="container">
-            <header>Write your Diary</header>
+            
+            <header>Docket</header>
             <a href="/diary"><i class="fa-solid fa-angles-left" style="color: #ffffff;"></i></a>
-            <a href="#"><i class="fa-solid fa-camera fa-2xl" style="color: #ffffff;"></i></a>
+            <a href="#"><i class="fa-solid fa-camera fa-xl" id="camera" style="color: #ffffff;"></i></a>
+            
             <form action="" method="post">
                 <div class="flame">
                     <textarea class="text" id="text" name="text" placeholder="text . . ." required></textarea>
                 </div>
                 <div class="addiary">
+                    <div class="memory">memories</div>
                     <input type="submit" class="button" value="submit">
                 </div> 
             </form>
