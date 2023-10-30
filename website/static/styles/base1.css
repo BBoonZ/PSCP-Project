@@ -16,6 +16,7 @@ body{
   font-size: calc(6em);
   margin: auto;
   margin-top: calc(15%);
+  z-index: 3;
 }
 
 .wrapper h2{
@@ -23,6 +24,7 @@ body{
   margin-top: -10px;
   margin-left: 7%;
   font-size: 1.25em;
+  z-index: 2;
 }
 
 .wrapper{
@@ -44,6 +46,7 @@ input.button{
   padding: 13px;
   width: 200px;
   margin-top: 5px;
+  z-index: 4;
 }
 
 input.button:hover{
@@ -51,7 +54,10 @@ input.button:hover{
   color: #150c0c;
 }
 
-
+spline-viewer {
+  position: absolute;
+  z-index: -1;
+}
 /*
 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 
