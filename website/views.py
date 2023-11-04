@@ -13,11 +13,12 @@ def home():
 def home2():
     return render_template('navbar.html', user=current_user)
 
-@views.route('/history')
+@views.route('/history/<month>')
 @login_required
-def history():
+def history(month):
     val = Note.query.filter_by(user_id=current_user.id).all()
     return render_template('history.html', user=current_user, note=val, val=len(val))
+
 
 @views.route('/diary')
 @login_required
