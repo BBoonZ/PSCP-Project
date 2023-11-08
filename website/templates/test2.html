@@ -7,7 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <textarea name="txt" id="txt" cols="30" rows="10"></textarea>
     {% for i in range(note_len) %}
         {% if note_str[i] == note_id %}
             {{ note[i].data }}

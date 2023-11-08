@@ -73,7 +73,7 @@ def newpass():
 def edit():
     if request.method == 'POST':
         note = request.form.get('text')
-
+        print(note)
         current_datetime = datetime.datetime.today()
 
         month_name = current_datetime.strftime('%B')
