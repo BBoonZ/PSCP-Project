@@ -2,9 +2,13 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from os import path
 from flask_login import LoginManager
+from flask_mail import Mail, Message
+from itsdangerous import URLSafeTimedSerializer
 
 db = SQLAlchemy()
 DB_NAME = "database.db"
+
+mail = Mail()
 
 def create_app():
     app = Flask(__name__)
@@ -30,6 +34,18 @@ def create_app():
     @login_manager.user_loader
     def load_user(id):
         return User.query.get(int(id))
+    
+    app.config['MAIL_SERVER'] = 'smtp.googlemail.com'  # เปลี่ยนเป็น SMTP server ของคุณ
+    app.config['MAIL_PORT'] = 587  # ปรับเป็นพอร์ตของ SMTP server ของคุณ
+    app.config['MAIL_USE_TLS'] = True  # ใช้ TLS (Transport Layer Security)
+    app.config['MAIL_USE_SSL'] = False  # ไม่ใช้ SSL
+    app.config['MAIL_USERNAME'] = 'titleman00123@gmail.com'  # ระบุชื่อผู้ใช้ SMTP server ของคุณ
+    app.config['MAIL_PASSWORD'] = 'gtqg kibc otci tcvd'  # ระบุรหัสผ่าน SMTP server ของคุณ
+
+    mail.init_app(app)
+    serializer = URLSafeTimedSerializer(app.config['SECRET_KEY'])
+
+    app.serializer = serializer
 
     return app
 
