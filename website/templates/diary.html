@@ -1,0 +1,25 @@
+{% extends "navbar.html" %}
+{% block title %}Diary{% endblock %}
+
+{% block content %}
+<head>
+  <script src="https://kit.fontawesome.com/1fadf630f7.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/diary.css') }}">
+
+</head>
+<body>
+    <div class="container">
+        <header>Docket</header>
+        
+        <div class="flame">
+            <a href="#"><div><img src="{{ url_for('static',filename='styles/jin.JPG') }}" alt="picture"></div></a>
+            <div class="month"><span id="text1">January</span><span id="text2"> Just now</span></div>
+        </div>
+        <div class="addiary">
+            <a href="/history"><input type="submit" class="history" value="History"></a>
+            <a href="/edit"><input type="submit" class="add" value="ADD Diary"></a>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

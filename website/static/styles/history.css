@@ -41,7 +41,7 @@ body{
 .fa-angles-left{
     position: absolute;
     right: 380px;
-    top: 49px;
+    top: 47px;
     cursor: pointer;
 }
 .dropdown button{
@@ -129,3 +129,11 @@ body{
     box-sizing: border-box;
     width: 7.7rem;
 }
+
+.flame::-webkit-scrollbar {
+    display: none;
+ }
+
+.content::-webkit-scrollbar {
+    display: none;
+  }
