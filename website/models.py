@@ -5,6 +5,7 @@ import time
 
 class Pic(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    filename = db.Column(db.String(100))
     data = db.Column(db.LargeBinary)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
@@ -14,6 +15,7 @@ class Note(db.Model):
     day = db.Column(db.String(50))
     month = db.Column(db.String(50))
     love = db.Column(db.String(50))
+    filename = db.Column(db.String(100))
     date = db.Column(db.DateTime(timezone=True), default=func.now())
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 

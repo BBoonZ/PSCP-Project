@@ -1,5 +1,5 @@
-from flask import Blueprint ,render_template, request, flash, redirect, url_for,current_app
-from .models import User, Note
+from flask import Blueprint ,render_template, request, flash, redirect, url_for,current_app, Flask
+from .models import User, Note, Pic
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import login_user, login_required, logout_user, current_user
 from . import db, mail
@@ -126,23 +126,37 @@ def edit():
     if request.method == 'POST':
         note = request.form.get('text')
         print(note)
+
+        file = request.files['file']
+        print(file)
+        if not file:
+            print('maimee')
+            pic = Pic.query.filter_by(id=1).all()[0]
+            upload = Pic(filename=pic.filename, data=pic.data, user_id=current_user.id)
+            file.filename = pic.filename
+        else:
+            upload = Pic(filename=file.filename, data=file.read(), user_id=current_user.id)
+        db.session.add(upload)
+        db.session.commit()
+
         current_datetime = datetime.datetime.today()
         month_name = current_datetime.strftime('%B')
         day_name = current_datetime.strftime('%A')
-        _txt = Note(data=note, day=day_name, month=month_name, love='True', user_id=current_user.id)
+        _txt = Note(data=note, day=day_name, month=month_name, love='True', filename=file.filename, user_id=current_user.id)
         db.session.add(_txt)
         db.session.commit()
         flash('Your Diary has been Create!', category='success')
     return render_template('edit.html', user=current_user)
 
-@auth.route('/test2', methods=['GET', 'POST'])
+'''@auth.route('/test2', methods=['GET', 'POST'])
 @login_required
-def edit_test():
+def test2():
     if request.method == 'POST':
-        note = request.form.get('text')
-        pic = request.files.get('file')
-        print(note)
-        print(pic)
-        if pic:
-            print(pic.read())
-    return render_template('test2.html', user=current_user)
+        file = request.files['file']
+        print(file)
+
+        upload = Pic(filename=file.filename, data=file.read())
+        db.session.add(upload)
+        db.session.commit()
+
+    return render_template('test2.html', user=current_user)'''

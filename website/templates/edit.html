@@ -25,14 +25,14 @@
             <a href="/diary"><i class="fa-solid fa-angles-left" style="color: #ffffff;"></i></a>
             <a href="#"><i class="fa-solid fa-camera fa-xl" id="camera" style="color: #ffffff;"></i></a>
 
-            <form action="" method="post">
+            <form action="" method="post" enctype="multipart/form-data">
                 <div class="flame">
                     <textarea class="text" id="text" name="text" placeholder="text . . ." required></textarea>
                 </div>
                 <div class="addiary">
-                    <div class="memory">memories</div>
+                    <input type="file" name="file" class="custom-file-input">
                     <div class="memory" id="summbit">After submit you can not be edit.</div>
-                    <input type="submit" class="button" value="submit">
+                    <button class="button">Submit</button>
             </form>
         </div>
     </div>

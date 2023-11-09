@@ -32,9 +32,9 @@
             </div>
         </div>
         <div class="flame">
-            {% for i in note %}
+            {% for i, j in note %}
             <a href="/history/diary/{{ i }}">
-                <div class="row1" id="f11"><img src="{{ url_for('static',filename='styles/jin.JPG') }}" alt="picture">
+                <div class="row1" id="f11"><img src="/test/{{ j.filename }}" alt="picture" style="background-size: cover;">
                 </div>
             </a>
             {% endfor %}

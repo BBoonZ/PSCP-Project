@@ -110,3 +110,8 @@ header{
 .flame::-webkit-scrollbar{
   display: none;
 }
+
+.custom-file-input {
+  justify-content: center;
+  margin-top: 10px;
+}

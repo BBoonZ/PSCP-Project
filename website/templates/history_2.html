@@ -15,12 +15,12 @@
             {% for i in range(note_len) %}
             {% if note_str[i] == note_id %}
             <p>{{ note_date[i] }} {{ note[i].day }} {{ note[i].month}}</p>
-            {% endif %}
-            {% endfor %}
             <div class="flame">
-                <div class="row1" id="f11"><img src="{{ url_for('static',filename='styles/jin.JPG') }}" alt="picture">
+                <div class="row1" id="f11"><img src="/test/{{ note[i].filename }}" alt="picture">
                 </div>
             </div>
+            {% endif %}
+            {% endfor %}
             <div class="txt">
                 {% for i in range(note_len) %}
                 {% if note_str[i] == note_id %}
