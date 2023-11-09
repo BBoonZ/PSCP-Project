@@ -134,3 +134,15 @@ def edit():
         db.session.commit()
         flash('Your Diary has been Create!', category='success')
     return render_template('edit.html', user=current_user)
+
+@auth.route('/test2', methods=['GET', 'POST'])
+@login_required
+def edit_test():
+    if request.method == 'POST':
+        note = request.form.get('text')
+        pic = request.files.get('file')
+        print(note)
+        print(pic)
+        if pic:
+            print(pic.read())
+    return render_template('test2.html', user=current_user)

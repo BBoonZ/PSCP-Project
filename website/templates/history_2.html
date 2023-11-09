@@ -1,0 +1,35 @@
+{% extends "navbar.html" %}
+{% block title %}history{% endblock %}
+
+{% block content %}
+
+<head>
+    <script src="https://kit.fontawesome.com/1fadf630f7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/test2.css') }}">
+</head>
+
+<body>
+    <span><a href="/diary"><i class="fa-solid fa-angles-left" style="color: #ffffff;"></i></a>
+        <div class="container">
+            <header>My Diary</header>
+            {% for i in range(note_len) %}
+            {% if note_str[i] == note_id %}
+            <p>{{ note_date[i] }} {{ note[i].day }} {{ note[i].month}}</p>
+            {% endif %}
+            {% endfor %}
+            <div class="flame">
+                <div class="row1" id="f11"><img src="{{ url_for('static',filename='styles/jin.JPG') }}" alt="picture">
+                </div>
+            </div>
+            <div class="txt">
+                {% for i in range(note_len) %}
+                {% if note_str[i] == note_id %}
+                <textarea class="text" cols="30" rows="10" disabled>{{ note[i].data }}</textarea>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+</body>
+
+</html>
+{% endblock %}

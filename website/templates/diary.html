@@ -12,11 +12,11 @@
         <header>Docket</header>
         
         <div class="flame">
-            <a href="#"><div><img src="{{ url_for('static',filename='styles/jin.JPG') }}" alt="picture"></div></a>
-            <div class="month"><span id="text1">January</span><span id="text2"> Just now</span></div>
+            <a href="/history/diary/{{ note }}"><div><img src="{{ url_for('static',filename='styles/jin.JPG') }}" alt="picture"></div></a>
+            <div class="month"><span id="text1">{{ val_date }}</span><span id="text1">  {{ val_month }}</span></div>
         </div>
         <div class="addiary">
-            <a href="/history"><input type="submit" class="history" value="History"></a>
+            <a href="/history/none"><input type="submit" class="history" value="History"></a>
             <a href="/edit"><input type="submit" class="add" value="ADD Diary"></a>
         </div>
     </div>
