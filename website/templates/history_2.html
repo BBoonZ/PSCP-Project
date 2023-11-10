@@ -9,8 +9,9 @@
 </head>
 
 <body>
-    <span><a href="/diary"><i class="fa-solid fa-angles-left" style="color: #ffffff;"></i></a>
         <div class="container">
+            <span class="back"><a href="/diary"><i class="fa-solid fa-angles-left" style="color: #ffffff;"></i></a>
+            </span>
             <header>My Diary</header>
             {% for i in range(note_len) %}
             {% if note_str[i] == note_id %}

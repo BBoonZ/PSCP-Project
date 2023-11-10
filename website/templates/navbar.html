@@ -24,7 +24,13 @@
         </ul>
     </nav>
     {% if user.is_authenticated %}
-    <a href="/user/info"><i class="fa-solid fa-user fa-xl" id="nav-iogo" style="color : #ffffff;"></i></a>
+    <div class="navdrop">
+        <button class="navbut"><a href="/user/info"><i class="fa-solid fa-user fa-xl" id="nav-iogo" style="color : #ffffff;"></i></a></button>
+        <div class="navcon">
+            <a href="#" class="nav" id="navuser">User</a>
+            <a href="#" class="nav">Login</a>
+        </div>
+    </div>
     {% endif %}
     {% block content %}{% endblock %}
 </body>
