@@ -14,13 +14,13 @@
       <div class="login form">
         <a href="/home"><box-icon class='xbox' name='x' color='#d0cfcf'></box-icon></a>
         <header>Create New Password</header>
-      <form action="#">
-          <input type="text" placeholder="Password" required>
-          <input type="password" placeholder="Confrim Password" required>
+      <form action="" method="post">
+        <input type="password" name="password1" id="password1" placeholder="Create a new password">
+        <input type="password" name="password2" id="password2" placeholder="Confirm your password">
+          <div class="check">
+            <input type="submit" class="button" value="submit">     
+        </div>
       </form>
-      <div class="check">
-          <input type="submit" class="button" value="Login">     
-      </div>
       <div class="back">
           <span id="backto">Back To <a href="/login">Login</a>
           </span>

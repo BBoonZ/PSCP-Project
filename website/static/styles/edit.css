@@ -26,7 +26,7 @@ header{
 
 .container0{
   position: absolute;
-  top: 55%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   max-width: 430px;
@@ -83,6 +83,11 @@ header{
   font-size: 14px;
   margin-top: 5px;
 }
+
+#summbit {
+  margin-top: 1.8rem;
+}
+
 .button{
   color: #fff;
   background: transparent;
@@ -91,7 +96,7 @@ header{
   font-size: 1.2rem;
   font-weight: 300;
   letter-spacing: 1px;
-  margin-top: 3.8rem;
+  margin-top: .5rem;
   cursor: pointer;
   transition: 0.4s;
   width: 11rem;
@@ -104,4 +109,9 @@ header{
 
 .flame::-webkit-scrollbar{
   display: none;
+}
+
+.custom-file-input {
+  justify-content: center;
+  margin-top: 10px;
 }

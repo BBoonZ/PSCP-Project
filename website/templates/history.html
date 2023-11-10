@@ -2,9 +2,10 @@
 {% block title %}history{% endblock %}
 
 {% block content %}
+
 <head>
-  <script src="https://kit.fontawesome.com/1fadf630f7.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" type='text/css' href="{{ url_for('static',filename='styles/history.css') }}">
+    <script src="https://kit.fontawesome.com/1fadf630f7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type='text/css' href="{{ url_for('static',filename='styles/history.css') }}">
 </head>
 
 <body>
@@ -15,28 +16,31 @@
         <div class="dropdown">
             <button> Month <span><i class="fa-solid fa-angle-down" style="color: #ffffff;"></i></span></button>
             <div class="content">
-                <a href="#">Default</a>
-                <a href="#">Favorite</a>
-                <a href="#">January</a>
-                <a href="#">February</a>
-                <a href="#">March</a>
-                <a href="#">April</a>
-                <a href="#">May</a>
-                <a href="#">June</a>
-                <a href="#">July</a>
-                <a href="#">August</a>
-                <a href="#">September</a>
-                <a href="#">October</a>
-                <a href="#">November</a>
-                <a href="#">December</a>
+                <a href="/history/none">Default</a>
+                <a href="/history/January">January</a>
+                <a href="/history/February">February</a>
+                <a href="/history/March">March</a>
+                <a href="/history/April">April</a>
+                <a href="/history/May">May</a>
+                <a href="/history/June">June</a>
+                <a href="/history/July">July</a>
+                <a href="/history/August">August</a>
+                <a href="/history/September">September</a>
+                <a href="/history/October">October</a>
+                <a href="/history/November">November</a>
+                <a href="/history/December">December</a>
             </div>
         </div>
         <div class="flame">
-            {% for i in note %}
-                <a href="/test2/{{ i }}"><div class="row1" id="f11"><img src="{{ url_for('static',filename='styles/jin.JPG') }}" alt="picture"></div></a>
+            {% for i, j in note %}
+            <a href="/history/diary/{{ i }}">
+                <div class="row1" id="f11"><img src="/test/{{ j.filename }}" alt="picture" style="background-size: cover;">
+                </div>
+            </a>
             {% endfor %}
         </div>
     </div>
 </body>
+
 </html>
 {% endblock %}
