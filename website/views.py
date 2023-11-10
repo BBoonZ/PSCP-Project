@@ -71,7 +71,7 @@ def diary():
 @views.route('/test2')
 @login_required
 def test2():
-    return render_template('test2.html', user=current_user)
+    return render_template('test.html', user=current_user)
 
 @views.route('/test/<filename>')
 @login_required
