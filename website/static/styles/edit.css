@@ -128,3 +128,6 @@ header{
 .line1 .fa-solid fa-angles-left{
   position: relative;
 }
+label{
+  cursor: pointer;
+}
