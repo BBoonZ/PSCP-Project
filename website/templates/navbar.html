@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>{% block title %}Home{% endblock %}</title>
+  <title>{% block title %}Docket{% endblock %}</title>
   <script src="https://kit.fontawesome.com/1fadf630f7.js" crossorigin="anonymous"></script>
   <!---Custom CSS File--->
   <link rel="stylesheet" href="{{ url_for('static',filename='styles/navbar.css') }}">
@@ -14,11 +14,9 @@
     <nav class="navbar">
         <ul>
             {% if not user.is_authenticated %}
-            <li><a href="/home">Home</a></li>
             <li><a href="/login">Login</a></li>
             <li><a href="/sign-up">Sign Up</a></li>
             {% else %}
-            <li><a href="/home">Home</a></li>
             <li><a href="/diary">Diary</a></li>
             {% endif %}
         </ul>

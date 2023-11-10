@@ -33,7 +33,6 @@ header{
   width: 25rem;
   text-align: center;
   color: #fff;
-  max-width: 430px;
   height: 575px;
 }
 
@@ -45,13 +44,10 @@ header{
 }
 .fa-angles-left{
   right: 22.4rem;
-  top: 39px;
+  top: 22px;
   
 }
-#camera{
-  right: 28px;
-  top: 43px;
-}
+
 .flame{
   border: solid white 2px;
   background-color: transparent;
@@ -84,6 +80,11 @@ header{
   margin-top: 5px;
 }
 
+.addiary {
+  position: relative;
+  top: 10px;
+}
+
 #summbit {
   margin-top: 1.8rem;
 }
@@ -114,4 +115,16 @@ header{
 .custom-file-input {
   justify-content: center;
   margin-top: 10px;
+}
+
+.line1 {
+  position: relative;
+}
+
+.line1 .fa-solid fa-camera fa-xl{
+  position: relative;
+}
+
+.line1 .fa-solid fa-angles-left{
+  position: relative;
 }
