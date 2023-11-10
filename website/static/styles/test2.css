@@ -83,3 +83,9 @@ p {
     margin-top: 10px;
     color: #ffffff;
 }
+.back{
+    position: absolute;
+    right: 310px;
+    top: 9px;
+    cursor: pointer;
+}
