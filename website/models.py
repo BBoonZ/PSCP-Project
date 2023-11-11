@@ -17,6 +17,8 @@ class Note(db.Model):
     love = db.Column(db.String(50))
     filename = db.Column(db.String(100))
     date = db.Column(db.DateTime(timezone=True), default=func.now())
+    verification_token = db.Column(db.String(200), nullable=True)
+    is_verified = db.Column(db.Boolean, default=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
 class User(db.Model, UserMixin):
