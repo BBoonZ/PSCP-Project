@@ -1,5 +1,9 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "index.py" }
+    {
+      "source": "/(.*)",
+      "destination": "index.py",
+      "homepage":"my-docket-git-main-bboonzs-projects.vercel.app"
+    }
   ]
 }
