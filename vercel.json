@@ -1,9 +1,21 @@
 {
   "version": 2,
   "builds": [
-    { "src": "index.py", "use": "@vercel/python" }
+    {
+      "src": "index.py",
+      "use": "@vercel/python"
+    }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/website/templates/base.html" }
+    {
+      "src": "/(.*)",
+      "dest": "/website/templates/base.html"
+    }
+  ],
+  "crons": [
+    {
+      "path": "/api/cron",
+      "schedule": "0 10 * * *"
+    }
   ]
 }
