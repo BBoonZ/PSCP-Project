@@ -1,9 +1,9 @@
 {
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "index.py",
-      "homepage":"my-docket-git-main-bboonzs-projects.vercel.app"
-    }
+  "version": 2,
+  "builds": [
+    { "src": "index.py", "use": "@vercel/python" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/index.py" }
   ]
 }
