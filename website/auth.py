@@ -18,13 +18,15 @@ def login():
         password = request.form.get('password')
 
         user = User.query.filter_by(email=email).first()
-        if user:
+        if user and user.is_verified:
             if check_password_hash(user.password, password):
                 flash('Logged in successfully!', category='success')
                 login_user(user, remember=True)
                 return redirect(url_for('auth.login'))
             else:
                 flash('Incorrect password, try again.', category='error')
+        elif user and not user.is_verified:
+            flash('Please verify your email before logging in.', category='error')
         else:
             flash('Email does not exist.', category='error')
 
@@ -58,9 +60,42 @@ def sign_up():
             db.session.add(new_user)
             db.session.commit()
 
-            flash('Account have been create', category='success')
+            serializer = current_app.serializer
+            token = serializer.dumps(email, salt='email-confirm')
+
+            new_user.verification_token = token
+            db.session.commit()
+            # send verification email
+            verification_url = url_for('auth.verify_email', token=token, _external=True)
+            message_body = f'Please click the following link to verify your email: {verification_url}'
+            send_verifly(email, message_body)
+
+            flash('Account have been create You have to verify at your email', category='success')
             return redirect(url_for('auth.sign_up'))
     return render_template('sign-up.html', user=current_user)
+
+def send_verifly(email, message):
+    msg = Message('Verify your email', sender='your_email@example.com', recipients=[email])
+    msg.body = message
+    mail.send(msg)
+
+@auth.route('/verify-email/<token>', methods=['GET'])
+def verify_email(token):
+    try:
+        serializer = current_app.serializer
+        email = serializer.loads(token, salt='email-confirm', max_age=3600)  # max_age in seconds
+        user = User.query.filter_by(email=email).first()
+        if user:
+            user.is_verified = True
+            db.session.commit()
+            flash('Email verified successfully.', category='success')
+        else:
+            flash('Invalid token or user not found.', category='error')
+
+    except Exception as e:
+        flash('Invalid or expired token.', category='error')
+
+    return redirect(url_for('auth.login'))
 
 def send_mail(email, reset_url):
     msg = Message('Reset Password', sender='your_email@example.com', recipients=[email])
