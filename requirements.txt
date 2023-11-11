@@ -1,5 +1,4 @@
-flask
-Flask-SQLAlchemy
-flask-login
-flask-ngrok
-flask-mail
+Flask==2.3.3
+Flask-SQLAlchemy==3.1.1
+Flask-login==0.6.2
+Flask-mail==0.9.1

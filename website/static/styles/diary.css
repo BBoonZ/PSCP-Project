@@ -1,28 +1,31 @@
 /* Import Google font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
-body{
+
+body {
     background-image: url('milkway1.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
 }
-.container{
+
+.container {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     max-width: 430px;
     width: 100%;
     background-color: rgb(0, 0, 0, 20%);
     border-radius: 30px;
-    border: 2px solid #dddddd8d;
+    border: 2px solid rgba(255, 255, 255, .2);
     text-align: center;
     padding-left: 1px;
     padding-right: 1px;
@@ -30,16 +33,17 @@ body{
     width: 25rem;
     height: 36rem;
 }
-header{
+
+header {
     color: #ddd;
     font-size: 2.5rem;
     font-weight: 500;
     text-align: center;
     margin-bottom: 10px;
     margin-top: 10px;
-  }
+}
 
-.flame img{
+.flame img {
     height: 19rem;
     width: 19rem;
     border-radius: 17px;
@@ -48,43 +52,30 @@ header{
     background-color: #ffffff;
     border: 1px solid #ffffff;
 }
-.flame div{
+
+.flame div {
     color: #ddd;
     font-size: 14px;
     font-weight: 200;
-    text-align: center;  
+    text-align: center;
     margin-bottom: none;
 }
-.month{
+
+.month {
     padding-top: 9px;
 }
-#text2{
+
+#text2 {
     font-size: 11px;
     font-weight: 100;
     color: #6e6e6e;
 }
-.addiary{
+
+.addiary {
     margin-top: 2rem;
 }
-.history{
-    color: #fff;
-    width: 10rem;
-    height: 3rem;
-    background: transparent;
-    border-radius: 20px;
-    border: 2px solid #dddddd8d;
-    font-size: 1rem;
-    font-weight: 350;
-    letter-spacing: 1px;
-    margin-top: 1.7rem;
-    cursor: pointer;
-    transition: 0.4s;
-  }
-.history:hover{
-    background: white;
-    color: #150c0c;
-  }
-.add{
+
+.history {
     color: #fff;
     width: 10rem;
     height: 3rem;
@@ -98,7 +89,28 @@ header{
     cursor: pointer;
     transition: 0.4s;
 }
-.add:hover{
+
+.history:hover {
+    background: white;
+    color: #150c0c;
+}
+
+.add {
+    color: #fff;
+    width: 10rem;
+    height: 3rem;
+    background: transparent;
+    border-radius: 20px;
+    border: 2px solid #dddddd8d;
+    font-size: 1rem;
+    font-weight: 350;
+    letter-spacing: 1px;
+    margin-top: 1.7rem;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.add:hover {
     background: white;
     color: #150c0c;
 }

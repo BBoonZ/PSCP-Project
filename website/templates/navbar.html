@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="{{ url_for('static',filename='styles/earth2.png') }}">
   <title>{% block title %}Docket{% endblock %}</title>
   <script src="https://kit.fontawesome.com/1fadf630f7.js" crossorigin="anonymous"></script>
   <!---Custom CSS File--->
@@ -23,10 +24,9 @@
     </nav>
     {% if user.is_authenticated %}
     <div class="navdrop">
-        <button class="navbut"><a href="/user/info"><i class="fa-solid fa-user fa-xl" id="nav-iogo" style="color : #ffffff;"></i></a></button>
+        <button class="navbut"><a href="#"><i class="fa-solid fa-user fa-xl" id="nav-iogo" style="color : #ffffff;"></i></a></button>
         <div class="navcon">
-            <a href="#" class="nav" id="navuser">User</a>
-            <a href="#" class="nav">Log out</a>
+            <a href="/logout" class="nav">Log out</a>
         </div>
     </div>
     {% endif %}
