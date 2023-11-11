@@ -39,8 +39,8 @@ def create_app():
     app.config['MAIL_PORT'] = 587  # ปรับเป็นพอร์ตของ SMTP server ของคุณ
     app.config['MAIL_USE_TLS'] = True  # ใช้ TLS (Transport Layer Security)
     app.config['MAIL_USE_SSL'] = False  # ไม่ใช้ SSL
-    app.config['MAIL_USERNAME'] = 'titleman00123@gmail.com'  # ระบุชื่อผู้ใช้ SMTP server ของคุณ
-    app.config['MAIL_PASSWORD'] = 'gtqg kibc otci tcvd'  # ระบุรหัสผ่าน SMTP server ของคุณ
+    app.config['MAIL_USERNAME'] = 'docket0123@gmail.com'  # ระบุชื่อผู้ใช้ SMTP server ของคุณ
+    app.config['MAIL_PASSWORD'] = 'iuzg ryaj lghq gfij'  # ระบุรหัสผ่าน SMTP server ของคุณ
 
     mail.init_app(app)
     serializer = URLSafeTimedSerializer(app.config['SECRET_KEY'])
