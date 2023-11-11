@@ -1,0 +1,41 @@
+{% extends "navbar.html" %}
+
+{% block content %}
+<head>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <link rel="stylesheet" type='text/css' href="{{ url_for('static',filename='styles/sign-up.css') }}">
+</head>
+
+
+<div class="container0">
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      {% if category == 'error' %}
+        <h1>{{ message }}</h1>
+      {% else %}
+        <h2>{{ message }}</h2>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+  {% endwith %}
+    <div class="container">
+      <input type="checkbox" id="check">
+        <div class="registration form">
+            <a href="/home"><box-icon class='xbox' name='x' color='#d0cfcf'></box-icon></a>
+            <header>Signup</header>
+            <form action="" method="post">
+              <input type="email" name="email" id="email" placeholder="Enter your email">
+              <input type="password" name="password1" id="password1" placeholder="Create a password">
+              <input type="password" name="password2" id="password2" placeholder="Confirm your password">
+              <input type="submit" class="button" value="Signup">
+            <div class="signup">
+              <span class="signup">Already have an account?
+              <a href="/login">Login</a>
+              </span>
+            </div>
+        </div>
+    </div>
+  </div>
+  </form>
+{% endblock %}

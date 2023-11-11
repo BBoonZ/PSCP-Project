@@ -1,0 +1,110 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+    background-image: url('milkway1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 430px;
+    width: 100%;
+    background-color: rgb(0, 0, 0, 20%);
+    border-radius: 30px;
+    border: 2px solid #dddddd8d;
+    padding: 3rem;
+}
+
+.xbox{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.forgothead{
+    color: #ddd;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    margin-top: -.25rem;
+    
+}
+.forgothead header{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.forgothead span{
+    font-size: 15px;
+}
+#input{
+   height: 60px;
+   width: 100%;
+   padding: 0 15px;
+   background-color: transparent;
+   caret-color: #ffffff;
+   color: #ffffff;
+   font-size: 17px;
+   margin-bottom: 1.3rem;
+   border-top: 1px transparent;
+   border-left: 1px transparent;
+   border-right: 1px transparent;
+   border-bottom: 1px solid #ddd;
+   outline: none;
+}
+
+::placeholder{
+    color: #dddddd8a;
+  }
+
+.button{
+    color: #fff;
+    background: transparent;
+    border-radius: 20px;
+    border: 2px solid #dddddd8d;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-top: 0.7rem;
+    cursor: pointer;
+    transition: 0.4s;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1.2rem;
+}
+.button:hover{
+    background: white;
+    color: #150c0c;
+}
+.back{
+    color: #ddd;
+    text-align: center;
+    font-size: 17px;
+
+}
+.back a{
+    color: #7a90ffcd;
+    text-decoration: none;
+}
+
+.back a:hover{
+    text-decoration: underline;
+}
+
+.back a:visited{
+    color: #7a90ffcd;
+}
+

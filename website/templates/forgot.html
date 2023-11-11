@@ -1,0 +1,26 @@
+{% extends "navbar.html" %}
+
+{% block content %}
+<head>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <link rel="stylesheet" type='text/css' href="{{ url_for('static',filename='styles/forgot.css') }}">
+</head>
+
+
+<div class="container">
+  <div class="forgothead">
+    <a href="/home"><box-icon class='xbox' name='x' color='#d0cfcf'></box-icon></a>
+      <header>Forgot Password</header>
+      <span>Enter your email sent you link to reset your password.</span> 
+  </div>
+  <form action="" method="post">
+      <input type="email" name="email" id="input" placeholder="Email" required>
+      <div><input type="submit" class="button" value="Submit"></div>
+  </form>
+  <div class="back">
+      <span id="backto">Back To <a href="/login">Login</a>
+      </span>
+  </div>
+
+</div>
+{% endblock %}

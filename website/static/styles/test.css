@@ -1,0 +1,71 @@
+html {
+  min-height: 100%;
+}
+
+body {
+  background-image: url("milkway1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+  right: 20%;
+  top: 20%;
+  position: absolute;
+  text-align: center;
+  margin: auto;
+  width: 60%;
+  /*border: 3px solid #73AD21;*/
+  padding: 10px;
+  z-index: 3;
+}
+
+
+
+.container h1{
+  color: #ffffff00;
+  -webkit-text-stroke-width: .75px;
+  -webkit-text-stroke-color: rgb(240, 248, 255);
+  font-size: calc(6em);
+  margin: auto;
+  margin-top: calc(15%);
+  z-index: 3;
+}
+
+.container h2{
+  color: aliceblue;
+  margin-top: -10px;
+  margin-left: 7%;
+  font-size: 1.25em;
+  z-index: 2;
+}
+
+input.button{
+  color: #fff;
+  background: transparent;
+  border-radius: 30px;
+  border: 2px solid rgba(255, 255, 255, .2);
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-top: 1.7rem;
+  cursor: pointer;
+  transition: 0.4s;
+  font-size: 12px;
+  padding: 13px;
+  width: 200px;
+  margin-top: 5px;
+  z-index: 4;
+}
+
+input.button:hover{
+  background: white;
+  color: #150c0c;
+}
+
+spline-viewer {
+  position: absolute;
+  margin: auto;
+  margin-bottom: 50%;
+}
