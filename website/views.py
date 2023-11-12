@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, send_file
+from flask import Blueprint, render_template, send_file, url_for
 from io import BytesIO
 import base64
 
@@ -77,11 +77,12 @@ def test2():
 @login_required
 def test(filename):
     if filename == 'none':
-        pic = Pic.query.filter_by(id=1).all()[0]
-        return send_file(BytesIO(pic.data), download_name=pic.filename, as_attachment=True)
+        return send_file('static/styles/milkway1.jpg', mimetype='image/*')
     pic = Pic.query.filter_by(filename=filename).all()[0]
     print(pic)
     return send_file(BytesIO(pic.data), download_name=pic.filename, as_attachment=True)
+
+
 
 @views.route('add-db')
 def add_db():

@@ -166,9 +166,8 @@ def edit():
         print(file)
         if not file:
             print('maimee')
-            pic = Pic.query.filter_by(id=1).all()[0]
-            upload = Pic(filename=pic.filename, data=pic.data, user_id=current_user.id)
-            file.filename = pic.filename
+            upload = Pic(filename='none', user_id=current_user.id)
+            file.filename = 'none'
         else:
             upload = Pic(filename=file.filename, data=file.read(), user_id=current_user.id)
         db.session.add(upload)
