@@ -1,4 +1,4 @@
 Flask
 Flask-SQLAlchemy
 Flask-login
-Flask-mail
+Flask-mail==0.9.1
